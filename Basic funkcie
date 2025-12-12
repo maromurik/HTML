@@ -10,7 +10,7 @@
 <p>Vitajte na mojej stranke<br>P</p> <!-- br je line break-->
 <hr> <!-- Thematic break - oddeli mi text od dalsieho silnejsie ako br -->
 <a href="https://www.w3schools.com">POZOR VIRUS</a>
-<img src="labut.jpg" alt="W3Schools.com" width="200" height="142">
+<img src="ibaklobuk.jpg" alt="W3Schools.com" width="200" height="142">
 <h1 style="font-size:60px;">Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
@@ -46,6 +46,44 @@
 <p>This is <sup>superscripted</sup> text.</p>
 <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 <bdo dir="rtl">This text will be written from right to left</bdo>
+<form>
+    <p>
+        <label for = "a">Zadaj a</label>
+        <input type = "text" name = "a" id = "a">
+    </p>
+    <p>
+        <label for = "b">Zadaj b</label>
+        <input type = "text" name = "b" id = "b">
+    </p>
+    <p>
+        <label for = "c">Zadaj c</label>
+        <input type = "text" name = "c" id = "c">
+    </p>
+    <p>
+        <input type = "Button" value = "počítaj" id = "gombicek">
+    </p>
+</form>
+<script>
+    gombik = document.getElementById("gombicek")
+    gombik.addEventListener("click", (event) => {
+    var a = parseFloat(document.getElementById('a').value);
+    var b = parseFloat(document.getElementById('b').value);
+    var c = parseFloat(document.getElementById('c').value);
+    var dis = b**2 -4*a*c;
+    if (dis>0){
+    var x1 = (-b+dis**0.5)/2*a;
+    var x2 = (-b-dis**0.5)/2*a;
+    alert(x1.toString()+" "+x2.toString());
+    }else if (dis == 0){
+    var x1 = -b/2*a;
+    alert(x1);
+    }else{
+    alert("NEEXISTUJE");
+    }})
+
+</script>
+
+
 
 
 </body>
